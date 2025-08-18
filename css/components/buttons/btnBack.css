@@ -1,1 +1,1 @@
-.btn-back{gap:var(--spacing-6)}.btn-back__txt{color:var(--color-white)}.btn-back--black .btn-back__txt{color:var(--color-secondary)}
+.btn-back{gap:var(--spacing-6)}.btn-back__txt{color:var(--color-white);-webkit-transition:color .3s ease-in-out;transition:color .3s ease-in-out}.btn-back__svg svg path{-webkit-transition:fill .3s ease-in-out;transition:fill .3s ease-in-out}.btn-back--black .btn-back__txt{color:var(--color-secondary)}.btn-back.active .btn-back__svg svg path{fill:var(--color-primary)}.btn-back.active .btn-back__txt{color:var(--color-primary)}
