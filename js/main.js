@@ -2063,19 +2063,22 @@ function onChangeLoad(isLoading) {
   }
 }
 var cookie = document.querySelector(".cookie");
-if (!localStorage.getItem("cookieMuni")) {
-  cookie.classList.add("active");
+if (cookie) {
+  if (!localStorage.getItem("cookieMuni")) {
+    cookie.classList.add("active");
+  }
 }
 function cookieActive() {
   var scrollHeight = document.documentElement.scrollHeight;
   // Сколько прокручено + высота окна
   var scrollPosition = window.scrollY + window.innerHeight;
-
-  // Если дошёл до самого низа (или почти)
-  if (scrollPosition >= scrollHeight - 50 && !localStorage.getItem("cookieMuni")) {
-    cookie.classList.add("active");
-  } else {
-    cookie.classList.remove("active");
+  if (cookie) {
+    // Если дошёл до самого низа (или почти)
+    if (scrollPosition >= scrollHeight - 50 && !localStorage.getItem("cookieMuni")) {
+      cookie.classList.add("active");
+    } else {
+      cookie.classList.remove("active");
+    }
   }
 }
 if (cookie) {
